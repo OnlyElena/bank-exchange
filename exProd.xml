@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--tetst127.0.0.1:137/regmvv/=null;oit1053:oit1053-->
+    <!--tesFileCopy=123.txt-->
+
+    <!--Ангарский-->
+    <!--127.0.0.1:137/d$/fssp/regmvv/=null;Администратор:123-->
+    <bean id="02" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="org.firebirdsql.jdbc.FBDriver"/>
+        <property name="url" value="jdbc:firebirdsql:127.0.0.1/3052:ncore-fssp?lc_ctype=WIN1251"/>
+        <property name="username" value="sysdba"/>
+        <property name="password" value="321"/>
+        <property name="ProcessName" value="SberBank"/>
+        <property name="urlPIEV" value="127.0.0.1:137/d$/fssp/regmvv/"/>
+        <property name="authentication" value="null;Администратор:123"/>
+    </bean>
+
+
+
+    <!--<bean id="testDao.dataSource" class="fssp38.sberbank.dao.TestDaoImp">-->
+    <!--<property name="dataSource" ref="Октябрьский"/>-->
+    <!--</bean>-->
+
+</beans>
